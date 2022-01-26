@@ -14,8 +14,23 @@
         <td><%= c.sceneType %></td>
         <td><%= c.position %></td>
         <td><a href="/users/<%= c._id %>">DETAILS</a></td>
+        <td>
+        <% if (user._id.equals(user && user._id)) { %>
+          <form action="/cards/<%= c._id %>?_method=DELETE" method="POST" class="secondary-content">
+            <button type="submit" class="btn-small red-text">Delete</button>
+          </form>
+        </td>
+        <% } %>
+        <td>
+        <% if (user._id.equals(user && user._id)) { %>
+          <form action="/cards/<%= c._id %>" method="GET" class="secondary-content">
+            <button type="submit" class="btn-small red-text">Edit</button>
+          </form>
+        </td>
+        <% } %>
+        <% }) %>
       </tr>
-      <% }); %>
+
     </tbody>
   </table>
   
