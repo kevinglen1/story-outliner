@@ -1,0 +1,22 @@
+<%- include('../partials/header') %>
+
+<table id="list">
+  <thead>
+    <tr>
+      <th>Scene Type</th>
+      <th>Position<br>Year</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% user.cards.forEach(function(c) { %>
+      <tr>
+        <td><%= c.sceneType %></td>
+        <td><%= c.position %></td>
+        <td><a href="/users/<%= c._id %>">DETAILS</a></td>
+      </tr>
+      <% }); %>
+    </tbody>
+  </table>
+  
+<%- include('../partials/footer') %>

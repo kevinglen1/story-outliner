@@ -3,7 +3,7 @@ const passport = require('passport')
 
 // The root route renders our only view
 router.get('/', function(req, res) {
-  res.render('index', {user: null});
+  res.render('index', {title: 'Story Outliner', user: null});
 });
 
 router.get('/auth/google', passport.authenticate(
@@ -14,7 +14,7 @@ router.get('/auth/google', passport.authenticate(
 router.get('/oauth2callback', passport.authenticate(
   'google', 
   {
-    successRedirect: '/',
+    successRedirect: '/cards/index',
     failureRedirect: '/users'
   }
 ))

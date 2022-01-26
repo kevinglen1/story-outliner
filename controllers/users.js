@@ -2,7 +2,7 @@ const User = require('../models/user')
 
 module.exports = {
   index,
-  addFact,
+  addCard,
   delFact
 };
 
@@ -27,8 +27,8 @@ function index(req, res, next) {
   });
 }
 
-function addFact(req, res, next) {
-  req.user.facts.push(req.body)
+function addCard(req, res, next) {
+  req.user.cards.push(req.body)
   req.user.save(function(err) {
     res.redirect('/users')
   })

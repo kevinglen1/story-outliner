@@ -7,7 +7,7 @@ router.get('/users', usersCtrl.index);
 // POST /facts
 // We will already have access to the logged in student on
 // the server, therefore do not use: /students/:id/facts
-router.post('/cards', isLoggedIn, usersCtrl.addFact);
+router.post('/cards', isLoggedIn, usersCtrl.addCard);
 
 // DELETE /facts/:id
 router.delete('/facts/:id', isLoggedIn, usersCtrl.delFact);

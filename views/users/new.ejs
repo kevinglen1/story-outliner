@@ -1,0 +1,22 @@
+<%- include('../partials/header') %>
+
+<form id="new-form" action="/cards" method="POST">
+  <label>Scene Type:</label>
+  <input type="text" name="sceneType">
+  <label>Position:</label>
+  <input type="number" name="position">
+  <label>Starting Value</label>
+  <select name="startingValue">
+    <option value="positive">Positive</option>
+    <option value="negative">Negative</option>
+  </select>
+  <select name="endingValue">
+    <option value="positive">Positive</option>
+    <option value="negative">Negative</option>
+  </select>
+  <label>Description</label>
+  <input type="text" name="description">
+  <button type="submit">Submit</button>
+</form>
+
+<%- include('../partials/footer') %>
