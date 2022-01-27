@@ -12,7 +12,7 @@ Express
 Materialize
 
 ## Getting Started: 
-Deploy App: https://kevins-story-outliner.herokuapp.com/
+Deployed App: https://kevins-story-outliner.herokuapp.com/
 
 Trello board: https://trello.com/b/yY3M1EyW/screenwriting-app
 
