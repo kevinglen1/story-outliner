@@ -1,38 +1,38 @@
 <%- include('../partials/header') %>
 
-<form id="new-form" action="/cards/<%= card._id%>?_method=PUT" method="POST">
-  <label>Scene Type:</label>
-  <input type="text" name="sceneType" placeholder="<%= card.sceneType %>">
-  <label>Position:</label>
-  <input type="number" name="position">
+<form id="edit-form" action="/cards/<%= card._id%>?_method=PUT" method="POST">
+  <div class="input-field col s6">
+    <input id="input_text" type="text" name="sceneType" placeholder="<%= card.sceneType %>" data-length="40">
+    <label for="input_text">Scene Type:</label>
+  </div>
+    <div class="input-field col s6">
+    <label>Position:</label>
+    <input type="number" name="position" placeholder="<%= card.position %>">
+  </div>
+  
   <div class="input-field col s12">
-  
-  <select name="startingValue" placeholder="<%= card.startingValue %>">
-    <option value="positive">Positive</option>
-    <option value="negative">Negative</option>
-  </select>
-  <label>Starting Value:</label>
-</div>
-  <div class="input-field col s12"></div>
-  
-  <select name="endingValue">
-    <option value="positive">Positive</option>
-    <option value="negative">Negative</option>
-  </select>
-  <label>Ending Value:</label>
-</div>
-<div class="input-field col s12">
-    <textarea type="text" name="description" placeholder="<%= card.description %>"id="textarea1" class="materialize-textarea"></textarea>
+    <select id="starting-value" name="startingValue" placeholder="<%= card.startingValue %>">
+      <option value="positive">Positive</option>
+      <option value="negative">Negative</option>
+    </select>
+    <label for="starting-value">Starting Value:</label>
+  </div>
+    <div class="input-field col s12">
+      <select id="ending-value" name="endingValue">
+        <option value="positive">Positive</option>
+        <option value="negative">Negative</option>
+      </select>
+      <label for="ending-value">Ending Value:</label>
+    </div>
+  <div class="input-field col s12">
+    <textarea type="text" name="description" placeholder="<%= card.description %>" id="textarea1" class="materialize-textarea"></textarea>
     <label for="textarea1">Description:</label>
   </div>
-  <!-- <label>Description:</label>
-  <input type="text" name="description" label="description"> -->
   <button type="submit">Submit</button>
-</div>
 </form>
 
 <script>
-      document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener('DOMContentLoaded', function() {
     var elems = document.querySelectorAll('select');
     var instances = M.FormSelect.init(elems);
   });
