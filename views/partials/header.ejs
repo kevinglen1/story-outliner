@@ -1,22 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- Google Icon Fonts used by Materialize -->
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- Materialize CSS Framework -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-  <link rel="stylesheet" href="stylesheets/style.css" />
-  <!-- JavaScript for Materialize -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-  <title>Story Outliner</title>
-</head>
-<body>
-  <nav>
-    <a href="/cards/new" >Add Card</a>
-    <a href="/cards/index">All Cards</a>
-  </nav>
-  <main>
-    <h1>Story Outliner</h1>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Google Icon Fonts used by Materialize -->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Materialize CSS Framework -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+    <link rel="stylesheet" href="stylesheets/style.css" />
+    <!-- JavaScript for Materialize -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <title>Story Outliner</title>
+  </head>
+  <body>
+    <nav>
+      <ul>
+        <li>
+          <a href="/cards/new">Add Card</a>
+        </li>
+        <li>
+          <a href="/cards/index">All Cards</a>
+        </li>
+      </ul>
+      <ul class="right">
+        <li>
+          <% if (user) { %>
+          <a href="/logout"
+            ><i class="material-icons right">trending_flat</i>Log Out</a
+          >
+          <% } else { %>
+          <a href="/auth/google"
+            ><i class="material-icons left">vpn_key</i>Login with Google</a
+          >
+          <% } %>
+        </li>
+      </ul>
+    </nav>
+    <main>
+      <h1 class="center-align">Story Outliner</h1>
+

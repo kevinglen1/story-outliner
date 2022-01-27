@@ -1,32 +1,15 @@
-var router = require('express').Router();
-const cardsCtrl = require('../controllers/cards');
-var usersCtrl = require('../controllers/users');
+var router = require("express").Router();
+const cardsCtrl = require("../controllers/cards");
 
-router.get('/index', cardsCtrl.index);
-router.get('/new', cardsCtrl.new);
-
-// router.get('/:id', cardsCtrl.show);
-router.post('/', cardsCtrl.create);
-
-
-
-
-
-// GET /users
-router.get('/users', usersCtrl.index);
-
-// POST /facts
-// We will already have access to the logged in student on
-// the server, therefore do not use: /students/:id/facts
-router.post('/cards', isLoggedIn, usersCtrl.addCard);
-
-// DELETE /facts/:id
-router.delete('/:id', isLoggedIn, cardsCtrl.delCard);
-router.put('/:id', isLoggedIn, cardsCtrl.editCard);
-router.get('/:id', cardsCtrl.edit);
+router.get("/index", cardsCtrl.index);
+router.get("/new", isLoggedIn, cardsCtrl.new);
+router.post("/", isLoggedIn, cardsCtrl.create);
+router.delete("/:id", isLoggedIn, cardsCtrl.delCard);
+router.put("/:id", isLoggedIn, cardsCtrl.editCard);
+router.get("/:id", isLoggedIn, cardsCtrl.edit);
 
 function isLoggedIn(req, res, next) {
-  if (req.isAuthenticated()) return next()
-  res.redirect('/auth/google')
+  if (req.isAuthenticated()) return next();
+  res.redirect("/auth/google");
 }
-  module.exports = router;
+module.exports = router;
