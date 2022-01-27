@@ -1,8 +1,23 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 a {
   color: #00B7FF;
+}
+
+main {
+  flex: 1 0 auto;
+}
+.centered {
+  display: flex;
+  justify-content: center;
+
+}
+.card-width {
+  width: 600px;
 }

@@ -1,7 +1,8 @@
 # Story Outliner:
 A story outlining platform that uses digital index cards in the place of physical stationary in order to make the world a better place.
 
-## Screenshot(s): A screenshot of your app's landing page and any other screenshots of interest.
+## Screenshot(s): 
+<img src="/screenshot.png" alt="index view of app">
 
 ## Technologies Used:
 HTML

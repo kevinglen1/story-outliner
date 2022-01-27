@@ -20,10 +20,10 @@ function create(req, res, next) {
   });
 }
 function newCard(req, res) {
-  res.render("users/new");
+  res.render("users/new", { user: req.user });
 }
 function edit(req, res) {
-  res.render("users/edit", { card: req.user.cards.id(req.params.id) });
+  res.render("users/edit", { card: req.user.cards.id(req.params.id), user: req.user });
 }
 
 function delCard(req, res, next) {
