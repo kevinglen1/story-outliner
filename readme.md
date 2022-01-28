@@ -15,6 +15,8 @@ OAuth Authentication, Passport.js
 
 Materialize
 
+Heroku
+
 ## Getting Started: 
 Deployed App: https://kevins-story-outliner.herokuapp.com/
 
