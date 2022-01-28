@@ -10,6 +10,9 @@ CSS
 JAVASCRIPT
 NodeJS
 Express
+MongoDB
+Mongoose
+
 Materialize
 
 ## Getting Started: 
