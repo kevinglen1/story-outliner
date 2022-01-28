@@ -5,15 +5,13 @@ A story outlining platform that uses digital index cards in the place of physica
 <img src="/screenshot.png" alt="index view of app">
 
 ## Technologies Used:
-HTML
-CSS
-JAVASCRIPT
-Node.js
-Express
-MongoDB
-Mongoose
-OAuth
-Passport.js
+HTML CSS Javascript
+
+Node.js Express
+
+MongoDB Mongoose
+
+OAuth Passport.js
 
 Materialize
 
