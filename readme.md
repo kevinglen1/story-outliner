@@ -8,10 +8,12 @@ A story outlining platform that uses digital index cards in the place of physica
 HTML
 CSS
 JAVASCRIPT
-NodeJS
+Node.js
 Express
 MongoDB
 Mongoose
+OAuth
+Passport.js
 
 Materialize
 
